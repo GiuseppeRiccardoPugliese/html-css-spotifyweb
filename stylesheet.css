@@ -43,28 +43,24 @@
     background-color: #000000;
 }
 
-.sidebar-list {
-    margin: 20px 0;
-}
-
 .icon {
     width: 150px;
 }
 
-#sidebar i {
-    padding-right: 10px;
-    font-size: 20px;
+.sidebar-list {
+    margin: 20px 0;
 }
 
-#sidebar ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.sidebar-list img {
+    width: 25px;
+    top: 6px;
+    position: relative;
+    margin-right: 5px
 }
 
 #sidebar li {
     list-style: none;
-    line-height: 25px;
+    line-height: 2;
 }
 
 #sidebar a {
