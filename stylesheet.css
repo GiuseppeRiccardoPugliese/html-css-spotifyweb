@@ -12,7 +12,7 @@
 }
 
 /* Contenitore con padding vario*/
-.padding-container {
+.padding15px {
     padding: 15px;
 }
 
@@ -24,14 +24,17 @@
     background-color: #282828;
     display: flex;
     justify-content: space-between;
-    /* position: fixed;
-    width: 100%; */
 }
 
 /* LEFT SIDE */
 .left-side {
     display: flex;
     width: 25%;
+}
+
+.about_song a:hover {
+    opacity: 1;
+    text-decoration: underline;
 }
 
 .about_song a {
@@ -63,6 +66,10 @@
     flex-wrap: wrap;
 }
 
+.song_interaction a:hover {
+    opacity: 1;
+}
+
 .song_interaction a {
     margin: 0 5px;
     color: white;
@@ -90,8 +97,13 @@
     justify-content: center;
 }
 
+.fa-circle-play:hover {
+    font-size: 35px;
+}
+
 .fa-circle-play {
     padding: 0 20px;
+    font-size: 25px;
 }
 
 /* Barra di scorrimento della canzone */
@@ -126,6 +138,10 @@
     height: 5px;
     background-color: #c1c1c1;
     border-radius: 20px;
+}
+
+.bar:hover .scorrimento_bar {
+    background-color: yellowgreen;
 }
 
 .bar:hover .fa-circle {
@@ -171,12 +187,13 @@
 /*************************************************
     SIDE BAR CONTENITORE PRINCIPALE
  *************************************************/
-#sidebar {
+.sidebar {
     /* SET UP PRINCIPALE */
     width: 250px;
     height: 100%;
     background-color: #000000;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Icona spotify */
@@ -194,11 +211,20 @@
     margin-right: 5px
 }
 
+#opacity_none {
+    opacity: 1;
+}
+
 /* Stili section playlist */
 h4 {
     color: white;
     margin-bottom: 10px;
     font-size: 15px;
+}
+
+.playlist {
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .playlist li :first-child {
@@ -214,12 +240,16 @@ h4 {
 }
 
 /* STILI GENERALI SIDE BAR */
-#sidebar li {
+.sidebar li {
     list-style: none;
     line-height: 2;
 }
 
-#sidebar a {
+.sidebar a:hover {
+    opacity: 1;
+}
+
+.sidebar a {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -234,11 +264,6 @@ h4 {
 .download_user img {
     width: 15px;
     margin-right: 5px;
-}
-
-.download_user {
-    position: absolute;
-    bottom: 0;
 }
 
 .download_user span img {
@@ -268,7 +293,76 @@ h4 {
     flex-grow: 1;
     height: 100%;
     background-color: #141922;
+    overflow-y: auto;
 }
+
+.look_around ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.look_around li {
+    list-style: none;
+    line-height: 2;
+    display: inline;
+}
+
+.look_around a:hover {
+    opacity: 1;
+}
+
+.look_around a {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+
+/* Set up row col */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.col {
+    width: calc((100% / 6) - 10px);
+    text-align: center;
+    vertical-align: middle;
+}
+
+#main-part h1 {
+    color: white;
+    font-size: 22px;
+}
+
+.col h2 {
+    color: white;
+    font-size: 14px;
+    padding: 15px;
+}
+
+#main-part span {
+    color: white;
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.col img {
+    max-width: 100%;
+}
+
+.circle_img {
+    border-radius: 50%;
+}
+
+/* Player in hover sulle immagini */
+
 
 /*************************************************
     TOP BAR CON EFFETTUA L'UPGRADE
@@ -296,6 +390,13 @@ h4 {
     margin-right: 5px;
 }
 
+#topside-upgrade a:hover {
+    font-size: 15px;
+}
+
+/*************************************************
+    CORPO PRINCIPALE DELLA PARTE DI DESTRA
+ *************************************************/
 
 
 
