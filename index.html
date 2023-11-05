@@ -26,13 +26,19 @@
         <!-- Contenitore principale della parte di sinistra e di destra (search bar SINISTRA)(recently played etc DESTRA) -->
         <div id="wrapper-up">
             <div class="sidebar padding15px"> <!-- CONTENITORE PARTE DI SINISTRA -->
-                <div class="icon"> <!-- Icona di spotify -->
+                <div class="standard"> <!-- Icona di spotify -->
                     <img src="img/logo.svg" alt="">
                 </div>
+                <div class="not_standard"> <!-- Icona di spotify XS-->
+                    <img src="img/logo-small.svg" alt="">
+                </div>
                 <!-- Shortcut Per Home Cerca La tua libreria -->
-                <nav class="sidebar-utility"> <!-- SEZIONE DI HOME CERCA LIBRERIA -->
-                    <ul>
-                        <li>
+                <nav class="sidebar-utility"> <!-- SEZIONE DI HOME CERCA LIBRERIA STANDARD-->
+                    <ul class="standard">
+                        <li id="border_bottom">
+                            <div class="left_green_border">
+
+                            </div>
                             <a id="opacity_none" href="#"><img src="img/home.svg" alt="">Home</a>
                         </li>
                         <li>
@@ -42,13 +48,23 @@
                             <a href="#"><img src="img/libreria.svg" alt="">La tua libreria</a>
                         </li>
                     </ul>
+
+                    <ul class="not_standard"> <!-- 2ND UL FOR XS LAYOUT -->
+                        <li>
+                            <a id="opacity_none" href="#"><img src="img/home.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/search.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/libreria.svg" alt=""></a>
+                        </li>
+                    </ul>
                 </nav>
                 <section class="playlist"> <!-- SEZIONE DELLE PLAYLIST -->
                     <h4>PLAYLIST</h4> <!-- Playlist List -->
+                    <a href="#"><i class="fa-solid fa-plus"></i>Crea Playlist</a>
                     <ul>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-plus"></i>Crea Playlist</a>
-                        </li>
                         <li>
                             <a href="#">Nome Playlist</a>
                         </li>
@@ -73,9 +89,15 @@
                     </ul>
                 </section>
                 <section class="download_user">
-                    <a href="#"><img src="img/download.svg" alt="">Installa app</a>
-                    <hr>
-                    <span><img src="img/profile.svg" alt="">John Doe</span>
+                    <div class="standard">
+                        <a href="#"><img src="img/download.svg" alt="">Installa app</a>
+                        <hr>
+                        <span><img src="img/profile.svg" alt="">John Doe</span>
+                    </div>
+                    <div class="not_standard">
+                        <a href="#"><img id="download_resize" src="img/download.svg" alt=""></a>
+                        <span><img src="img/profile.svg" alt=""></span>
+                    </div>
                 </section>
 
             </div>
@@ -85,7 +107,10 @@
                 </div>
                 <div class="look_around"> <!-- barra di ricerca delle sezioni in alto -->
                     <ul>
-                        <li>
+                        <li id="border_bottom">
+                            <div class="green_border">
+
+                            </div>
                             <a href="#">IN EVIDENZA</a>
                         </li>
                         <li>
@@ -106,35 +131,65 @@
                     </ul>
                 </div>
                 <!-- RIPRODOTTE RECENTEMENTE -->
-                <h1 class="padding15px">Recenly played</h1>
+                <h1 class="padding15px">Recently played</h1>
                 <div class="row padding15px"> <!-- ROW DI BASE CON LE COL -->
                     <div class="col">
-                        <img src="img/metal_lifting.jpg" alt="">
+                        <div class="container_hover">
+                            <img src="img/metal_lifting.jpg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>Heavy Metal</h2>
                         <span>Subtitle</span>
                     </div>
                     <div class="col">
-                        <img src="img/stranger.jpeg" alt="">
+                        <div class="container_hover">
+                            <img src="img/stranger.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h2>
                         <span>Kyle Dixon & Michael Stein</span>
                     </div>
                     <div class="col">
-                        <img src="img/aquietplace.jpeg" alt="">
+                        <div class="container_hover">
+                            <img src="img/aquietplace.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>A quiet place</h2>
                         <span>Subtitle</span>
                     </div>
                     <div class="col">
-                        <img src="img/split.jpeg" alt="">
+                        <div class="container_hover">
+                            <img src="img/split.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>Split</h2>
                         <span>Subtitle</span>
                     </div>
                     <div class="col">
-                        <img src="img/cure.jpeg" alt="">
+                        <div class="container_hover">
+                            <img src="img/cure.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>A cure for wellness</h2>
                         <span>Subtitle</span>
                     </div>
                     <div class="col">
-                        <img src="img/sinister.jpeg" alt="">
+                        <div class="container_hover">
+                            <img src="img/sinister.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>Sinister</h2>
                         <span>Subtitle</span>
                     </div>
@@ -147,11 +202,21 @@
                 </div>
                 <div class="row padding15px"> <!-- ROW DI BASE CON LE COL -->
                     <div class="col">
-                        <img src="img/radar.jpeg" alt="">
+                        <div class="container_hover">
+                            <img src="img/radar.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>Release Radar</h2>
                     </div>
                     <div class="col">
-                        <img src="img/mixdaily.jpeg" alt="">
+                        <div class="container_hover">
+                            <img src="img/mixdaily.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>Daily Mix 1</h2>
                     </div>
                 </div>
@@ -162,11 +227,21 @@
                 </div>
                 <div class="row padding15px"> <!-- ROW DI BASE CON LE COL -->
                     <div class="col">
-                        <img class="circle_img" src="img/youg.jpeg" alt="">
+                        <div class="container_hover">
+                            <img class="circle_img" src="img/youg.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>Lana del Rey</h2>
                     </div>
                     <div class="col">
-                        <img class="circle_img" src="img/einaudi.jpeg" alt="">
+                        <div class="container_hover">
+                            <img class="circle_img" src="img/einaudi.jpeg" alt="">
+                            <div class="player_hover">
+                                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                            </div>
+                        </div>
                         <h2>Ludovico Einaudi</h2>
                     </div>
                 </div>
