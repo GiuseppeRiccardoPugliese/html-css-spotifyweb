@@ -26,6 +26,12 @@
     justify-content: space-between;
 }
 
+/* Contenitore */
+.fix_stretch {
+    width: 100%;
+    height: 100%;
+}
+
 /* LEFT SIDE */
 .left-side {
     display: flex;
@@ -53,7 +59,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 30px 0 10px;
+    margin: 0 10px 0 10px;
 }
 
 .left-side img {
@@ -63,7 +69,7 @@
 .song_interaction {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .song_interaction a:hover {
@@ -98,11 +104,10 @@
 }
 
 .fa-circle-play:hover {
-    font-size: 35px;
+    transform: scale(1.2);
 }
 
 .fa-circle-play {
-    padding: 0 20px;
     font-size: 25px;
 }
 
@@ -157,7 +162,7 @@
 /* RIGHT SIDE */
 .right-side {
     display: flex;
-    width: 25%;
+    min-width: 25%;
     justify-content: center;
     align-items: center;
 }
@@ -457,7 +462,7 @@ h4 {
 /*************************************************
     LARGE LAYOUT
  *************************************************/
-@media all and (min-width:951px) {
+@media all and (min-width:1001px) {
     .not_standard {
         display: none;
     }
@@ -466,7 +471,7 @@ h4 {
 /*************************************************
     MID LAYOUT
  *************************************************/
-@media all and (max-width:950px) {
+@media all and (max-width:1000px) {
     .not_standard {
         display: none;
     }
@@ -479,7 +484,7 @@ h4 {
 /*************************************************
     SMALL LAYOUT
  *************************************************/
-@media all and (max-width:700px) {
+@media all and (max-width:860px) {
 
     .look_around ul {
         flex-wrap: wrap;
@@ -488,13 +493,43 @@ h4 {
     .col {
         width: calc((100% / 2) - 10px);
     }
+
+    /* Controller adaptive */
+    .left-side img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .left-side {
+        align-items: center;
+    }
+
+    .macro_interaction {
+        font-size: 12px;
+    }
+
+    .song_interaction {
+        flex-wrap: wrap;
+    }
+
+    .about_song {
+        margin: 0 5px;
+    }
+
+    .right-side .bar {
+        margin: 0;
+    }
+
+    .middle-part .bar {
+        margin: 0 2px;
+    }
 }
 
 /*************************************************
     EXTRA-SMALL LAYOUT
  *************************************************/
 
-@media all and (max-width:500px) {
+@media all and (max-width:600px) {
 
     /* SIDE BAR RESPONSIVE */
     .sidebar {
@@ -552,5 +587,4 @@ h4 {
         display: flex;
         justify-content: center;
     }
-
 }
